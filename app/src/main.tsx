@@ -1,3 +1,4 @@
+import SignUpPage from "@/pages/SignUpPage.tsx"
 import "@/styles/globals/reset.scss"
 import "@/styles/globals/theme.scss"
 import React from "react"
@@ -9,6 +10,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/sign-up",
+    element: <SignUpPage />,
   },
 ])
 

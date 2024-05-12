@@ -1,7 +1,11 @@
+import { isLoggedInAtom } from "@/lib/state"
 import "@/styles/main-page/main-page__cta.scss"
 import "@/styles/main-page/main-page__hero.scss"
+import { useAtom } from "jotai"
 
 export default function App() {
+  const [isLoggedIn] = useAtom(isLoggedInAtom)
+
   return (
     <main>
       <div className="hero">
@@ -21,11 +25,19 @@ export default function App() {
           <br />
           Simply click the button below to go to the dashboard and get started!
         </p>
-        <a href="/dashboard">
-          <div className="cta__button">
-            <button>Get Started</button>
-          </div>
-        </a>
+        {isLoggedIn ? (
+          <a href="/dashboard">
+            <div className="cta__button">
+              <button>Go to Dashboard</button>
+            </div>
+          </a>
+        ) : (
+          <a href="/sign-up">
+            <div className="cta__button">
+              <button>Sign Up</button>
+            </div>
+          </a>
+        )}
       </div>
     </main>
   )
