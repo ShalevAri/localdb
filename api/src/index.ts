@@ -83,6 +83,19 @@ const deleteTable = async (tableName: string): Promise<void> => {
     )
   }
   try {
+    console.log(
+      `Deleting table ${tableName} in 5 seconds.\n This is irreversible.`
+    )
+
+    let countdown = 5
+    const intervalId = setInterval(() => {
+      console.log(`${countdown}...`)
+      countdown--
+    }, 1000)
+
+    await new Promise(resolve => setTimeout(resolve, 5000))
+
+    clearInterval(intervalId)
     const query = `DROP TABLE IF EXISTS ?`
     db.query(query, [tableName])
   } catch (err) {
