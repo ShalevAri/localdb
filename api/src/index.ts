@@ -99,7 +99,9 @@ const deleteTable = async (tableName: string): Promise<void> => {
     const query = `DROP TABLE IF EXISTS ?`
     db.query(query, [tableName])
   } catch (err) {
-    console.error("Error deleting table")
+    console.error(
+      `ERR: there was an error trying to delete the ${tableName} table`
+    )
     throw err
   }
 }
@@ -123,7 +125,9 @@ const forceDeleteTable = async (tableName: string): Promise<void> => {
     db.query(query, [tableName])
     console.log(`Force deleted table ${tableName}`)
   } catch (err) {
-    console.error("Error force deleting table")
+    console.error(
+      `ERR: there was an error trying to force delete the ${tableName} table`
+    )
     throw err
   }
 }
