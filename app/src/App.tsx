@@ -1,4 +1,5 @@
 import { isLoggedInAtom } from "@/lib/state"
+import "@/styles/globals/classes.scss"
 import "@/styles/main-page/main-page__cta.scss"
 import "@/styles/main-page/main-page__hero.scss"
 import { useAtom } from "jotai"
@@ -14,7 +15,7 @@ export default function App() {
           Interact with your local MySQL database effortlessly
         </p>
       </div>
-
+      <div className="py-4"></div>
       <div className="cta">
         <p className="cta__text">
           With LocalDB you can interact with your local MySQL database just like
