@@ -15,15 +15,17 @@ export default function App() {
         <p className="hero__subtitle">Local MySQL interaction made easy</p>
       </div>
       <div className="cta">
-        <p className="cta__text">
-          With LocalDB you can interact with your local MySQL database just like
-          you would with Prisma/Drizzle Studio.
-          <br />
-          You can create, modify and delete tables, and create/delete databases
-          from scratch with ease. There are even safeguards in place just for
-          your piece of mind.
-          <br />
-        </p>
+        <div className="cta__text-container">
+          <p className="cta__text">
+            With LocalDB you can interact with your local MySQL database just
+            like you would with Prisma/Drizzle Studio.
+          </p>
+          <p className="cta__text">
+            Create, modify and delete tables, and create/delete databases from
+            scratch with ease. There are even safeguards in place just for your
+            piece of mind.
+          </p>
+        </div>
         {isLoggedIn ? (
           <a href="/dashboard">
             <div className="cta__button">
