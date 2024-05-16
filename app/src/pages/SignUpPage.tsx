@@ -15,10 +15,6 @@ export default function SignUpPage() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
-    console.log(
-      `Your username is ${username}, your email is ${email}, and your password is ${password}`
-    )
   }
 
   if (isLoggedIn) {
