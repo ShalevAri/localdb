@@ -1,4 +1,4 @@
-import DashboardPage from "@/pages/DashboardPage.tsx"
+import DashboardPage from "@/pages/dashboardPage.tsx"
 import SignUpPage from "@/pages/SignUpPage.tsx"
 import "@/styles/globals/reset.scss"
 import "@/styles/globals/theme.scss"
