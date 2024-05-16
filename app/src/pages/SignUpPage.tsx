@@ -25,11 +25,13 @@ export default function SignUpPage() {
         <h2 className="signed-in-container__title">
           It looks like you are already logged in.
         </h2>
-        <div className="signed-in-container__button">
-          <button className="signed-in-container__button__button-element">
-            Continue to Dashboard
-          </button>
-        </div>
+        <a href="/dashboard">
+          <div className="signed-in-container__button">
+            <button className="signed-in-container__button__button-element">
+              Continue to Dashboard
+            </button>
+          </div>
+        </a>
       </div>
     )
   }
