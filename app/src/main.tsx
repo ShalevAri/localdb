@@ -1,3 +1,4 @@
+import DashboardPage from "@/pages/DashboardPage.tsx"
 import SignUpPage from "@/pages/SignUpPage.tsx"
 import "@/styles/globals/reset.scss"
 import "@/styles/globals/theme.scss"
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/sign-up",
     element: <SignUpPage />,
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardPage />,
   },
 ])
 
