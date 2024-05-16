@@ -5,10 +5,10 @@ import {
   usernameAtom,
 } from "@/lib/state"
 import "@/styles/sign-up-page/sign-up-page__global.scss"
-import { useAtom } from "jotai"
+import { useAtom, useAtomValue } from "jotai"
 
 export default function SignUpPage() {
-  const [isLoggedIn] = useAtom(isLoggedInAtom)
+  const isLoggedIn = useAtomValue(isLoggedInAtom)
   const [username, setUsername] = useAtom(usernameAtom)
   const [email, setEmail] = useAtom(emailAtom)
   const [password, setPassword] = useAtom(passwordAtom)
