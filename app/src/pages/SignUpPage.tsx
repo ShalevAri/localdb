@@ -5,16 +5,18 @@ import {
   usernameAtom,
 } from "@/lib/state"
 import "@/styles/sign-up-page/sign-up-page__global.scss"
-import { useAtom, useAtomValue } from "jotai"
+import { useAtom } from "jotai"
 
 export default function SignUpPage() {
-  const isLoggedIn = useAtomValue(isLoggedInAtom)
+  const [isLoggedIn, setIsLoggedIn] = useAtom(isLoggedInAtom)
   const [username, setUsername] = useAtom(usernameAtom)
   const [email, setEmail] = useAtom(emailAtom)
   const [password, setPassword] = useAtom(passwordAtom)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    setIsLoggedIn(true)
   }
 
   if (isLoggedIn) {
